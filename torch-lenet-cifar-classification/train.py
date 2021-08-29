@@ -72,7 +72,9 @@ if __name__== '__main__':
                 print('[%d, %5d] loss: %.3f' % (epoch + 1, i + 1, running_loss / 2000))
                 running_loss = 0.0
 
-        print('Finished Training')
+        print('Finished Training epoch')
+        Path = "./models/checkpoint-epoch%d" %(epoch)
+        torch.save(net, Path)
 
 
 
